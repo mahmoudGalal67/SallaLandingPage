@@ -1,0 +1,57 @@
+.custom-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-center;
+    font-weight: 600;
+    font-size: 1.35rem;
+   justify-content: center;
+    background-color: #fd9300;
+    color: #cff7ee;
+    padding-left: 18px !important;
+   padding-right: 18px!important;
+     padding: 12px;
+    border-radius: 15px 15px 12px 12px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  background-color: #fd9300;
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transform: perspective(70px) rotateX(5deg) rotateY(0deg);
+  }
+
+  .custom-button2{
+        display: flex;
+    flex-direction: column;
+    align-items: flex-center;
+    font-weight: 600;
+    font-size: 1.35rem;
+   justify-content: center;
+   border: 1px solid #fd9300;
+    color: #fd9300;
+   padding-left: 18px !important;
+   padding-right: 18px!important;
+     padding: 12px;
+    border-radius: 15px 15px 12px 12px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+  background-color: transparent transparent;
+    background-position: bottom right, bottom right;
+    background-size: 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transform: perspective(70px) rotateX(5deg) rotateY(0deg);
+  }
+  
+@media screen and (max-width: 768px) {
+  .custom-button {
+    padding-left: 9px !important;
+    padding-right: 9px!important;
+      padding: 10px;
+  }
+}
+
+  
+  
+  
