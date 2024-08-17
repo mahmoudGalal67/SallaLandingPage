@@ -1,13 +1,7 @@
 import React from "react";
 import img from "../assets/vat.png";
 import { FiPhone } from "react-icons/fi";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
 const Footer = () => {
@@ -359,17 +353,24 @@ const Footer = () => {
            lg:justify-between items-center mt-3 flex-wrap"
           >
             <div className="flex justify-center mx-auto lg:justify-end mt-4 lg:mt-0">
-              <a href="#" className="text-gray-600 mx-2">
-                <FaYoutube />
+              <a
+                href="https://www.facebook.com/people/SallaPlus/61557298537673/"
+                className="text-gray-600 mx-2"
+              >
+                <FaFacebookF />
               </a>
-              <a href="#" className="text-gray-600 mx-2">
-                <FaTwitter />
-              </a>
-              <a href="#" className="text-gray-600 mx-2">
+
+              <a
+                href="https://www.instagram.com/sallaplus/"
+                className="text-gray-600 mx-2"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="text-gray-600 mx-2">
-                <FaLinkedinIn />
+              <a
+                href="https://www.tiktok.com/@sallaplus7"
+                className="text-gray-600 mx-2"
+              >
+                <FaTiktok />
               </a>
             </div>
           </div>

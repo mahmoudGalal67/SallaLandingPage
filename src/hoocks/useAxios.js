@@ -3,16 +3,13 @@ import axiosConfig from "../config/axiosConfig";
 
 export default function useAxios(setLoading = null) {
   // retrive the token from place stored into.
-  
-  
-  const token=localStorage.getItem("token");
+
+  const token = localStorage.getItem("token");
 
   // crate axios instance with global options.
   const axiosInstance = axios.create({
     baseURL: axiosConfig.API_BASE_URL,
-    headers: {
-      //   ...
-    },
+    headers: {},
   });
 
   //   configure request before send.
