@@ -27,7 +27,10 @@ const LoginForm = () => {
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             axiosInstance
-              .post("http://front.sallaplus.com/api/website/user/login", values)
+              .post(
+                "https://sallaplusbacknew.sallaplus.com/public/api/website/user/login",
+                values
+              )
 
               .then((response) => {
                 console.log("Login response:", response);
