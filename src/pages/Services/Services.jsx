@@ -11,10 +11,7 @@ function Services() {
       <div className="wrapper">
         {services.map((item, i) => (
           <div className="item" key={i}>
-            <img
-              src="https://salla-landing-page.vercel.app/assets/services/Artboard 2.jpg"
-              alt=""
-            />
+            <img src={`/assets/${item.img}`} alt="" />
             <div className="name">{item.name}</div>
             <div className="price">{item.price}</div>
             <a href={`https://wa.me/+9660543842272?text=${item.name}`}>
