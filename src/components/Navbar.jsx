@@ -151,8 +151,8 @@ export default function Navbar() {
                     onMouseEnter={() => handleMouseEnter(menu)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <a
-                      href={menu}
+                    <Link
+                      to={menu}
                       className="flex items-center  justify-center py-2 px-3 text-gray-500 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent "
                     >
                       {menu === "home" && "الرئيسية"}
@@ -160,7 +160,7 @@ export default function Navbar() {
                       {menu === "Solutions" && "الحلول"}
                       {menu === "sectors" && "القطاعات"}
                       {menu === "prices" && "الأسعار"}
-                    </a>
+                    </Link>
                     {activeMenu === menu &&
                       (menu === "education" ||
                         menu === "sectors" ||
