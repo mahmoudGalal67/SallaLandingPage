@@ -12,7 +12,7 @@ export const services = [
   {
     name: "تصميم بروشور",
     price: 100,
-    img: "Artboard3.jpg",
+    img: "Artboard 3.jpg",
   },
   {
     name: "تصميم هاي لايت",
