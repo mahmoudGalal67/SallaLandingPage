@@ -18,7 +18,7 @@ export default function WebsiteRoutes() {
         }
       />
       <Route
-        path="/prices"
+        path="/our-services"
         element={
           <WebsiteLayout>
             <Services />
