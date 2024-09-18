@@ -40,7 +40,8 @@ const LoginForm = () => {
                   title: "Success",
                   text: "Login successful",
                 });
-                console.log("Login successful:", response);
+                localStorage.setItem("userToken", JSON.stringify(response));
+
                 navigate("/", { replace: true });
               })
               .catch((error) => {

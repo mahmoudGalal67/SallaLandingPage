@@ -139,91 +139,86 @@ export default function Navbar() {
             id="navbar-sticky"
           >
             <ul className="flex  flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-              {[
-                "",
-                "education",
-                "Solutions",
-                "sectors",
-                "prices",
-                "our-services",
-              ].map((menu) => (
-                <li
-                  key={menu}
-                  className={`relative ${
-                    ["education", "Solutions", "sectors"].includes(menu)
-                      ? "hover:rounded-t-lg hover:bg-white"
-                      : ""
-                  }`}
-                  onMouseEnter={() => handleMouseEnter(menu)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Link
-                    to={`/${menu}`}
-                    className="flex items-center  justify-center py-2 px-3 text-gray-500 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent "
+              {["", "education", "Solutions", "sectors", "our-services"].map(
+                (menu) => (
+                  <li
+                    key={menu}
+                    className={`relative ${
+                      ["education", "Solutions", "sectors"].includes(menu)
+                        ? "hover:rounded-t-lg hover:bg-white"
+                        : ""
+                    }`}
+                    onMouseEnter={() => handleMouseEnter(menu)}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    {menu === "" && "الرئيسية"}
-                    {menu === "education" && "التعليم"}
-                    {menu === "Solutions" && "الحلول"}
-                    {menu === "sectors" && "القطاعات"}
-                    {menu === "prices" && "الأسعار"}
-                    {menu === "our-services" && "خدماتنا"}
-                  </Link>
-                  {activeMenu === menu &&
-                    (menu === "education" ||
-                      menu === "sectors" ||
-                      menu === "Solutions") && (
-                      <div className="absolute right-0 w-72 rounded-b-lg shadow-lg bg-white">
-                        <div className="py-1  ">
-                          {menu === "education" &&
-                            educationMenuItems.map((item, index) => (
-                              <a
-                                key={index}
-                                href="#"
-                                className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
-                              >
-                                <item.icon className="mr-2 text-2xl" />
-                                <div>
-                                  {item.name}
-                                  <br />
-                                  <small>{item.description}</small>
-                                </div>
-                              </a>
-                            ))}
-                          {menu === "sectors" &&
-                            sectorsMenuItems.map((item, index) => (
-                              <a
-                                key={index}
-                                href="#"
-                                className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
-                              >
-                                <item.icon className="mr-2 text-2xl" />
-                                <div>
-                                  {item.name}
-                                  <br />
-                                  <small>{item.description}</small>
-                                </div>
-                              </a>
-                            ))}
-                          {menu === "Solutions" &&
-                            solutionsMenuItems.map((item, index) => (
-                              <a
-                                key={index}
-                                href="#"
-                                className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
-                              >
-                                <item.icon className="mr-2 text-2xl" />
-                                <div>
-                                  {item.name}
-                                  <br />
-                                  <small>{item.description}</small>
-                                </div>
-                              </a>
-                            ))}
+                    <Link
+                      to={`/${menu}`}
+                      className="flex items-center  justify-center py-2 px-3 text-gray-500 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent "
+                    >
+                      {menu === "" && "الرئيسية"}
+                      {menu === "education" && "التعليم"}
+                      {menu === "Solutions" && "الحلول"}
+                      {menu === "sectors" && "القطاعات"}
+                      {menu === "prices" && "الأسعار"}
+                      {menu === "our-services" && "خدماتنا"}
+                    </Link>
+                    {activeMenu === menu &&
+                      (menu === "education" ||
+                        menu === "sectors" ||
+                        menu === "Solutions") && (
+                        <div className="absolute right-0 w-72 rounded-b-lg shadow-lg bg-white">
+                          <div className="py-1  ">
+                            {menu === "education" &&
+                              educationMenuItems.map((item, index) => (
+                                <a
+                                  key={index}
+                                  href="#"
+                                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
+                                >
+                                  <item.icon className="mr-2 text-2xl" />
+                                  <div>
+                                    {item.name}
+                                    <br />
+                                    <small>{item.description}</small>
+                                  </div>
+                                </a>
+                              ))}
+                            {menu === "sectors" &&
+                              sectorsMenuItems.map((item, index) => (
+                                <a
+                                  key={index}
+                                  href="#"
+                                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
+                                >
+                                  <item.icon className="mr-2 text-2xl" />
+                                  <div>
+                                    {item.name}
+                                    <br />
+                                    <small>{item.description}</small>
+                                  </div>
+                                </a>
+                              ))}
+                            {menu === "Solutions" &&
+                              solutionsMenuItems.map((item, index) => (
+                                <a
+                                  key={index}
+                                  href="#"
+                                  className="px-4 py-2 text-gray-700 hover:bg-gray-100 flex gap-5 items-center"
+                                >
+                                  <item.icon className="mr-2 text-2xl" />
+                                  <div>
+                                    {item.name}
+                                    <br />
+                                    <small>{item.description}</small>
+                                  </div>
+                                </a>
+                              ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                </li>
-              ))}
+                      )}
+                  </li>
+                )
+              )}
             </ul>
 
             <Link
