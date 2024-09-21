@@ -42,7 +42,7 @@ const LoginForm = () => {
                 });
                 localStorage.setItem("userToken", JSON.stringify(response));
 
-                navigate("/", { replace: true });
+                window.location.href = `https://dashboard.sallaplus.com?name=${response.user.name}`;
               })
               .catch((error) => {
                 Swal.fire({
