@@ -25,22 +25,14 @@ export default function ForgetPassword() {
     }),
     onSubmit: (values, { setSubmitting }) => {
       axiosInstance
-        .post("/website/user/forgot-password", { email: values.email })
+        .post("/api/website/user/forgot-password", { email: values.email })
         .then((response) => {
           console.log(response, "success");
-          if (response.success) {
-            Swal.fire({
-              icon: "success",
-              title: "Success",
-              text: response.message,
-            });
-          } else {
-            Swal.fire({
-              icon: "error",
-              title: "Error",
-              text: response.message || "Failed to send reset email",
-            });
-          }
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: response.message,
+          });
         })
         .catch((error) => {
           Swal.fire({

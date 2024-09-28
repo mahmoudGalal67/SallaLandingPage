@@ -5,6 +5,7 @@ import NavigationComponent from "../pages/Authentication/NavigationComponent";
 import Forgetpassword from "../pages/Authentication/forgetpassword";
 import Page404 from "../pages/Page404 ";
 import Services from "../pages/Services/Services";
+import ResetForm from "../pages/Authentication/RsetPassword";
 
 export default function WebsiteRoutes() {
   return (
@@ -47,6 +48,14 @@ export default function WebsiteRoutes() {
         element={
           <WebsiteLayout>
             <Forgetpassword />
+          </WebsiteLayout>
+        }
+      />
+      <Route
+        path="/password/forget"
+        element={
+          <WebsiteLayout>
+            <ResetForm />
           </WebsiteLayout>
         }
       />
