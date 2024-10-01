@@ -5,12 +5,15 @@ import "aos/dist/aos.css";
 import Card from "../../components/Card";
 
 import { IoIosArrowDropleftCircle } from "react-icons/io";
-import img1 from "../../assets/imges/6.png";
-import img2 from "../../assets/imges/8.png";
-import img3 from "../../assets/imges/9.png";
-import img4 from "../../assets/imges/10.png";
-import img5 from "../../assets/imges/11.png";
-import img6 from "../../assets/imges/12.png";
+import img1 from "../../assets/31.svg";
+import img2 from "../../assets/32.svg";
+import img3 from "../../assets/33.svg";
+import img4 from "../../assets/34.svg";
+import img5 from "../../assets/35.svg";
+import img6 from "../../assets/36.svg";
+import img7 from "../../assets/37.svg";
+
+import img from "../../assets/b0152cd8434e13544085a5a9ec960eb5.png";
 
 export default function SectionThree() {
   useEffect(() => {
@@ -21,32 +24,26 @@ export default function SectionThree() {
     {
       title: "عبايات وأزياء ",
       description: "مزايا عديدة تلائم تجارتك ",
-      imge: img1,
+      imge: img2,
       shape: "#D8E1FE",
     },
     {
       title: "قطاع الجملة",
       description: "نقلة نوعية في البيع للشركات والمؤسسات",
-      imge: img3,
+      imge: img1,
       shape: "#D4F2FC",
     },
     {
       title: " المطاعم والمقاهي",
       description: "جميع ما تحتاجه لإدارة أعمالك رقميًا ",
-      imge: img2,
+      imge: img4,
       shape: "#847BEE",
     },
     {
       title: "صناعة المحتوى",
       description: "المكان الأنسب لتحويل شغفك بصناعة المحتوى إلى أرباح",
-      imge: img5,
+      imge: img3,
       shape: "#C7C7C7",
-    },
-    {
-      title: "تقديم الخدمات",
-      description: "حلول مميزة لتقديم خدماتك وإدارة أعمالك",
-      imge: img1,
-      shape: "#89E9D6",
     },
     {
       title: "المنتجات الرقمية",
@@ -57,6 +54,12 @@ export default function SectionThree() {
     {
       title: "الجمعيات الخيرية",
       description: "حلول سهلة لكافة الاحتياجات الرقمية لجمعيتكم",
+      imge: img7,
+      shape: "#276ACB",
+    },
+    {
+      title: " تقديم الخدمات",
+      description: "حلول مميزة لتقديم خدماتك وإدارة أعمالك",
       imge: img6,
       shape: "#276ACB",
     },
@@ -95,7 +98,11 @@ export default function SectionThree() {
     <>
       <div
         className="md:p-8 bg-gray-100 py-20"
-        style={{ backgroundColor: "#D4F2FC" }}
+        style={{
+          background: "#8AB2DC73",
+          background:
+            "radial-gradient(circle,#8AB2DC73 65%,rgba(255, 255, 255, 1) 100%)",
+        }}
       >
         <div
           className="flex text-center justify-center items-center flex-col my-5"
@@ -111,21 +118,23 @@ export default function SectionThree() {
             القطاعات
           </div>
         </div>
-
-        <div
-          className="flex flex-wrap justify-center gap-4  py-5"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-        >
-          {cards.map((card, index) => (
-            <Card
-              key={index}
-              title={card.title}
-              description={card.description}
-              imge={card.imge}
-              color={card.shape}
-            />
-          ))}
+        <div className="flex items-start">
+          <div
+            className="flex flex-wrap justify-center gap-4 flex-1 py-5"
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+          >
+            {cards.map((card, index) => (
+              <Card
+                key={index}
+                title={card.title}
+                description={card.description}
+                imge={card.imge}
+                color={card.shape}
+              />
+            ))}
+          </div>
+          <img className="flex-1" src={img} alt="" />
         </div>
       </div>
     </>

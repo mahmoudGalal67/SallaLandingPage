@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import img from "../assets/Logo.webp";
+import img from "../assets/logo.svg";
 import { Link } from "react-router-dom";
 import "animate.css";
 import { FaPlus, FaMinus } from "react-icons/fa6";
@@ -90,11 +90,11 @@ export default function Navbar() {
         isScrolled ? "bg-opacity-99 bg-[#ffffff]" : "bg-[#ffffff]"
       }`}
     >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 pl-0">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={img} className="h-14" alt="Salla Logo" />
         </a>
-        <div className="flex  gap-4">
+        <div className="flex  gap-4 md:flex-1">
           <div className="flex gap-4">
             <button
               data-collapse-toggle="navbar-sticky"
@@ -133,13 +133,13 @@ export default function Navbar() {
           id="navbar-sticky"
         > */}
           <div
-            className={`items-center justify-between ${
+            className={`items-center justify-around ${
               isModalOpen ? "block" : "hidden"
-            } w-full md:flex md:w-auto md:order-1`}
+            } w-full flex-1 md:flex md:w-auto md:order-1`}
             id="navbar-sticky"
           >
             <ul className="flex  flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
-              {["", "#education", "#Solutions", "#sectors", "our-services"].map(
+              {["", "education", "Solutions", "sectors", "our-services"].map(
                 (menu) => (
                   <li
                     key={menu}
@@ -156,11 +156,25 @@ export default function Navbar() {
                       className="flex items-center  justify-center py-2 px-3 text-gray-500 font-bold rounded hover:bg-gray-100 md:hover:bg-transparent "
                     >
                       {menu === "" && "الرئيسية"}
-                      {menu === "#education" && "التعليم"}
-                      {menu === "#Solutions" && "الحلول"}
-                      {menu === "#sectors" && "القطاعات"}
-                      {menu === "#prices" && "الأسعار"}
+                      {menu === "education" && "التعليم"}
+                      {menu === "Solutions" && "الحلول"}
+                      {menu === "sectors" && "القطاعات"}
+                      {menu === "prices" && "الأسعار"}
                       {menu === "our-services" && "خدماتنا"}
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={menu === "" && "hidden "}
+                        style={{ width: "15px", marginRight: "8px" }}
+                      >
+                        <path
+                          d="M23.5 11.5H12.5V0.500016C12.5 0.223875 12.2761 0 12 0C11.7239 0 11.5 0.223875 11.5 0.500016V11.5H0.500016C0.223875 11.5 0 11.7239 0 12C0 12.2761 0.223875 12.5 0.500016 12.5H11.5V23.5C11.5 23.7762 11.7239 24 12 24C12.2762 24 12.5001 23.7762 12.5001 23.5V12.5H23.5001C23.7762 12.5 24.0001 12.2761 24.0001 12C24 11.7239 23.7761 11.5 23.5 11.5Z"
+                          fill="#205672"
+                        />
+                      </svg>
                     </Link>
                     {activeMenu === menu &&
                       (menu === "education" ||
@@ -221,15 +235,25 @@ export default function Navbar() {
               )}
             </ul>
 
-            <Link
-              to="/login"
-              className="flex items-center px-5 text-gray-500 font-bold  border-r border-[#95d1ca]"
-            >
-              تسجيل الدخول
-            </Link>
-            <Link to="/register">
-              <button className="custom-navrbutton">أنشئ متجرك مجاناً</button>
-            </Link>
+            <div className="flex items-center justify-center gap-5 ">
+              <Link to="/register">
+                <button
+                  className="custom-button2 text-main_color"
+                  style={{ padding: "6px" }}
+                >
+                  {" "}
+                  تسجيل الدخول
+                </button>
+              </Link>
+              <Link to="/register">
+                <button
+                  className="custom-navrbutton"
+                  style={{ padding: "10px" }}
+                >
+                  أنشئ متجرك مجاناً
+                </button>
+              </Link>
+            </div>
           </div>
           {/* Modal for smaller screens */}
           {isModalOpen && (

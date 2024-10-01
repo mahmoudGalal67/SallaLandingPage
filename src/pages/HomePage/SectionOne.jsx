@@ -1,4 +1,4 @@
-import img from "../../assets/heroUpdate.png";
+import img from "../../assets/Login_Slider/main.svg";
 import Button from "../../components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -12,7 +12,7 @@ export default function SectionOne() {
   return (
     <>
       <section className="lg:pt-[12%] pt-[30%]  bg-center bg-cover   ">
-        <div className="lg:flex-row flex flex-col items-center mx-auto max-w-7xl px-4  lg:px-8 relative text-center  ">
+        <div className="lg:flex-row gap-24 flex flex-col items-center mx-auto max-w-7xl px-4  lg:px-8 relative text-center  ">
           <div
             className=" "
             data-aos="fade-up"
@@ -30,7 +30,7 @@ export default function SectionOne() {
               <div className="flex items-center justify-center gap-5 ">
                 <Link to="/register">
                   <Button>
-                    <p className="text-main_color">أنشئ متجرك مجانًا</p>
+                    <p>أنشئ متجرك مجانًا</p>
                   </Button>
                 </Link>
                 <Link to="https://dashboard.sallaplus.com/">

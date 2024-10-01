@@ -40,28 +40,28 @@ export default function SectionSeven() {
             <div className="flex flex-col space-y-2 mt-4">
               <div className="flex items-center gap-3">
                 <MdOutlineKeyboardDoubleArrowLeft className="text-[#004d5a] " />
-                <span className="text-[#4d4d4d] py-1 text-[1rem]">
+                <span className="text-[#4d4d4d] py-1 text-[1.2rem] font-semibold">
                   {" "}
                   وسائل دفع متعددة تلبى كافة احتياجات عملائك{" "}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <MdOutlineKeyboardDoubleArrowLeft className="text-[#004d5a]" />
-                <span className="text-[#4d4d4d] py-1 text-[1rem] ">
+                <span className="text-[#4d4d4d] py-1 text-[1.2rem] font-semibold ">
                   {" "}
                   تفعيل سريع لنظام المدفوعات خلال يوم واحد{" "}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <MdOutlineKeyboardDoubleArrowLeft className="text-[#004d5a]" />
-                <span className="text-[#4d4d4d] py-1 text-[1rem]">
+                <span className="text-[#4d4d4d] py-1 text-[1.2rem] font-semibold">
                   {" "}
                   حصيل المدفوعات بعد 24ساعة{" "}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 <MdOutlineKeyboardDoubleArrowLeft className="text-[#004d5a]" />
-                <span className="text-[#4d4d4d] py-1 text-[1rem]">
+                <span className="text-[#4d4d4d] py-1 text-[1.2rem] font-semibold">
                   {" "}
                   حماية عالية وأمان لكافة عملياتك{" "}
                 </span>
