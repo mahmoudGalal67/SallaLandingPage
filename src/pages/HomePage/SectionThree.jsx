@@ -113,7 +113,7 @@ export default function SectionThree() {
             {" "}
             سلة بلس تفهم كافة احتياجاتك
           </div>
-          <div className="md:text-[1.5rem] text-xl font-normal pt-6 max-w-4xl text-center text-[#6F9CCD] mx-3 mb-5">
+          <div className="md:text-[1.5rem] text-xl font-normal pt-6 max-w-4xl text-center text-[#000000CC] mx-3 mb-5">
             مهما كان مجال تجارتك يمكنك الاعتماد على سلة بلس ودعمها لمختلف
             القطاعات
           </div>

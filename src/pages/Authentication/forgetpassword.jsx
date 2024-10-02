@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import registerimg from "../../assets/registerimg.png";
-import Logo from "../../assets/Logo.webp";
+import Logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";

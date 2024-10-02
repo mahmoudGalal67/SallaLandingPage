@@ -3,7 +3,7 @@ import RegistrationForm from "./RegistrationForms";
 import LoginForm from "./LoginForm";
 import Registrationstyle from "./Registrationstyle";
 import Loginstyle from "./LoginS";
-import Logo from "../../assets/Logo.webp";
+import Logo from "../../assets/logo.svg";
 
 const AppContent = () => {
   const location = useLocation();

@@ -1,6 +1,7 @@
 import "./Services.css";
 
 import { services } from "../../components/data/data";
+import floatingImg from "../../assets/services/main.svg";
 
 function Services() {
   return (
@@ -12,6 +13,7 @@ function Services() {
       <div className="wrapper">
         {services.map((item, i) => (
           <div className="item" key={i}>
+            <img src={floatingImg} className="float" alt="" />
             <img src={`/${item.img}`} alt="" />
             <div className="name">{item.name}</div>
             <div className="price">{`${item.price}  ر.س`}</div>
