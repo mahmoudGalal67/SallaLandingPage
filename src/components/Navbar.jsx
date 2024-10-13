@@ -670,7 +670,8 @@ export default function Navbar() {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                         className={
-                          menu === "" || (menu == "our-services" && "hidden ")
+                          (menu == "" && "hidden ") ||
+                          (menu == "our-services" && "hidden ")
                         }
                         style={{ width: "15px", marginRight: "8px" }}
                       >
@@ -747,10 +748,7 @@ export default function Navbar() {
 
             <div className="flex items-center justify-center gap-5 ">
               <Link to="/register">
-                <button
-                  className="custom-button2 text-main_color"
-                  style={{ padding: "6px" }}
-                >
+                <button className="custom-button2 sm-btn text-main_color">
                   {" "}
                   تسجيل الدخول
                 </button>

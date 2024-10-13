@@ -11,7 +11,7 @@ export default function SectionOne() {
 
   return (
     <>
-      <section className="lg:pt-[12%] pt-[30%]  bg-center bg-cover   ">
+      <section className="main-section lg:pt-[12%] pt-[30%]  bg-center bg-cover">
         <div className="lg:flex-row gap-24 flex flex-col items-center mx-auto max-w-7xl px-4  lg:px-8 relative text-center  ">
           <div
             className=" "
@@ -28,15 +28,15 @@ export default function SectionOne() {
             </p>
             <div>
               <div className="flex items-center justify-center gap-5 ">
+                <Link to="https://dashboard.sallaplus.com/">
+                  <button className="custom-button2 sm-btn text-main_color">
+                    رحلة العميل
+                  </button>
+                </Link>
                 <Link to="/register">
                   <Button>
                     <p>أنشئ متجرك مجانًا</p>
                   </Button>
-                </Link>
-                <Link to="https://dashboard.sallaplus.com/">
-                  <button className="custom-button2 text-main_color">
-                    رحلة العميل
-                  </button>
                 </Link>
               </div>
             </div>

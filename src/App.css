@@ -44,3 +44,13 @@
   background-repeat: no-repeat;
   transform: perspective(70px) rotateX(5deg) rotateY(0deg);
 }
+
+.main-section {
+  background: linear-gradient(
+    110.28deg,
+    rgba(87, 178, 231, 0.3) 0.67%,
+    rgba(235, 225, 252, 0.3) 26%,
+    rgba(181, 181, 251, 0.18) 47.78%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
