@@ -118,7 +118,7 @@ export default function SectionThree() {
             القطاعات
           </div>
         </div>
-        <div className="flex items-start">
+        <div className="flex lg:flex-row flex-col items-start">
           <div
             className="flex flex-wrap justify-center gap-4 flex-1 py-5"
             data-aos="fade-up"

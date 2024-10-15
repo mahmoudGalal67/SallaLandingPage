@@ -64,7 +64,7 @@ export default function WebsiteRoutes() {
         path="*"
         element={
           <WebsiteLayout>
-            <Page404 />
+            <HomePage />
           </WebsiteLayout>
         }
       />
