@@ -2,10 +2,7 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 
 const Card = ({ imge, title, description, color }) => {
   return (
-    <div
-      style={{ border: "1px solid #57578E" }}
-      className="card mb-20 p-8 bg-white flex-1 max-w-[220px] md:max-w-[350px]  min-w-[280px] rounded-3xl pb-2"
-    >
+    <div className="card mb-20 p-8 bg-white flex-1 max-w-[220px] md:max-w-[350px]  min-w-[280px] rounded-3xl pb-2">
       <div className="wrapper flex flex-col gap-2">
         <div
           className="icon"
@@ -32,7 +29,7 @@ const Card = ({ imge, title, description, color }) => {
         </div>
         <h3
           className="text-xl font-bold mb-2 text-center"
-          style={{ color: "#4D52B6" }}
+          style={{ color: "#067DD3" }}
         >
           {title}
         </h3>

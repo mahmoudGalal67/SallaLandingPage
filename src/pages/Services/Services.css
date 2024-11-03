@@ -43,7 +43,7 @@
   text-align: right;
   flex: 1;
   margin: 45px 0;
-  border: 1px solid #57578e;
+  border: 1px solid #067dd3;
   -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.4);
   box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.4);
@@ -96,7 +96,7 @@
   line-height: 1.25rem;
   font-weight: 700;
   color: white;
-  background-color: #57578e;
+  background-color: #067dd3;
   margin-right: auto;
 }
 

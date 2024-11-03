@@ -5,8 +5,8 @@
   font-weight: 600;
   font-size: 1.35rem;
   justify-content: center;
-  border: 3px solid #086cba;
-  color: white;
+  border: 3px solid #def5fd;
+  color: #067dd3;
   padding-left: 10px !important;
   padding-right: 10px !important;
   padding: 6px;
@@ -30,8 +30,9 @@
   font-weight: 500;
   font-size: 1.2rem;
   justify-content: center;
-  background-color: #57578e;
-  color: white;
+  background: #def5fd;
+
+  color: #067dd3;
   padding-left: 15px !important;
   padding-right: 15px !important;
   padding: 3px;
@@ -45,12 +46,27 @@
   transform: perspective(70px) rotateX(5deg) rotateY(0deg);
 }
 
-.main-section {
-  background: linear-gradient(
-    110.28deg,
-    rgba(87, 178, 231, 0.3) 0.67%,
-    rgba(235, 225, 252, 0.3) 26%,
-    rgba(181, 181, 251, 0.18) 47.78%,
-    rgba(255, 255, 255, 0.3) 100%
-  );
+.sp-img {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+.sp-img2 {
+  position: absolute;
+  width: 50%;
+  right: -25%;
+  bottom: 80px;
+}
+
+.planet {
+  background: url(/public/planet.svg);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+@media (max-width: 800px) {
+  .planet {
+    background: none;
+  }
 }

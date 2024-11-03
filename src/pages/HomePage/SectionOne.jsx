@@ -1,4 +1,8 @@
-import img from "../../assets/Login_Slider/main.svg";
+import img1 from "../../assets/why1.svg";
+import img2 from "../../assets/why2.svg";
+import img3 from "../../assets/why3.svg";
+import img4 from "../../assets/why4.svg";
+
 import Button from "../../components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -14,7 +18,7 @@ export default function SectionOne() {
       <section className="main-section lg:pt-[12%] pt-[30%]  bg-center bg-cover">
         <div className="lg:flex-row gap-24 flex flex-col items-center mx-auto max-w-7xl px-4  lg:px-8 relative text-center  ">
           <div
-            className=" "
+            className="flex-1 "
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
           >
@@ -42,8 +46,96 @@ export default function SectionOne() {
             </div>
           </div>
 
-          <div className="flex justify-center py-10">
-            <img src={img} alt="Hero image" />
+          <div
+            className="flex flex-1 justify-center pt-10"
+            style={{ position: "relative" }}
+          >
+            <img src="/public/mainimg.png" alt="Hero image" />
+            <img className="sp-img" src="/public/bgspecial.svg" alt="" />
+            <img className="sp-img2" src="/public/rec.svg" alt="" />
+          </div>
+        </div>
+        <div className="why-salla px-8" style={{ color: "#067DD3" }}>
+          <div className="wrapper p-5 flex gap-4 flex-wrap justify-around items-center">
+            <div className="item flex flex-col gap-2 items-start justify-center">
+              <img src="/public/Logo.webp" alt="" style={{ width: "120px" }} />
+              <h2 className="text-2xl" style={{ fontWeight: "700" }}>
+                لماذا سلة بلس هي اختيارك الأول
+              </h2>
+              <a
+                href="#"
+                className="custom-navrbutton"
+                style={{ background: "#067DD3", color: "white" }}
+              >
+                {" "}
+                ابداء الأن &larr;
+              </a>
+            </div>
+            <div
+              className="item flex flex-col items-center justify-center p-3 text-center"
+              style={{
+                border: "1px solid #067DD3",
+                borderRadius: "14px",
+              }}
+            >
+              <img src={img1} alt="" />
+              <span style={{ fontWeight: "500" }}>
+                إنشاء متاجر إلكترونية مخصصة
+              </span>
+              <p>
+                اجعل تجربة الشراء أكثر سهولة مع خيارات دفع متنوعة، بما في ذلك
+                الدفع عند الاستلام والدفع الإلكتروني، لتلبية احتياجات عملائك
+                بأمان وراحة.
+              </p>
+            </div>
+            <div
+              className="item flex flex-col items-center justify-center p-3 text-center"
+              style={{
+                border: "1px solid #067DD3",
+                borderRadius: "14px",
+              }}
+            >
+              <img src={img2} alt="" />
+              <span style={{ fontWeight: "500" }}>
+                تكامل بوابات الدفع المتعددة{" "}
+              </span>
+              <p>
+                اجعل تجربة الشراء أكثر سهولة مع خيارات دفع متنوعة، بما في ذلك
+                الدفع عند الاستلام والدفع الإلكتروني، لتلبية احتياجات عملائك
+                بأمان وراحة.
+              </p>
+            </div>
+            <div
+              className="item flex flex-col items-center justify-center p-3 text-center"
+              style={{
+                border: "1px solid #067DD3",
+                borderRadius: "14px",
+              }}
+            >
+              <img src={img3} alt="" />
+              <span style={{ fontWeight: "500" }}>
+                إدارة شاملة للمخزون والطلبات{" "}
+              </span>
+              <p>
+                احصل على تحكم كامل في عملياتك التجارية مع أدوات متطورة لإدارة
+                المخزون ومتابعة الطلبات، مما يضمن سير العمل بسلاسة وكفاءة.
+              </p>
+            </div>
+            <div
+              className="item flex flex-col items-center justify-center p-3 text-center"
+              style={{
+                border: "1px solid #067DD3",
+                borderRadius: "14px",
+              }}
+            >
+              <img src={img4} alt="" />
+              <span style={{ fontWeight: "500" }}>تحليلات وتقارير متعمقة </span>
+              <p>
+                احصل على رؤى دقيقة حول أداء متجرك من خلال تقارير وتحليلات شاملة،
+                مما يساعدك في اتخاذ قرارات استراتيجية مدعومة بالبيانات لتحسين
+                مبيعاتك.
+              </p>
+            </div>
           </div>
         </div>
       </section>

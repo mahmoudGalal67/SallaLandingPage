@@ -55,13 +55,13 @@ export default function SectionThree() {
       title: "الجمعيات الخيرية",
       description: "حلول سهلة لكافة الاحتياجات الرقمية لجمعيتكم",
       imge: img7,
-      shape: "#276ACB",
+      shape: "##067DD3",
     },
     {
       title: " تقديم الخدمات",
       description: "حلول مميزة لتقديم خدماتك وإدارة أعمالك",
       imge: img6,
-      shape: "#276ACB",
+      shape: "##067DD3",
     },
   ];
 
@@ -96,14 +96,7 @@ export default function SectionThree() {
 
   return (
     <>
-      <div
-        className="md:p-8 bg-gray-100 py-20"
-        style={{
-          background: "#8AB2DC73",
-          background:
-            "radial-gradient(circle,#8AB2DC73 65%,rgba(255, 255, 255, 1) 100%)",
-        }}
-      >
+      <div className="md:p-8 bg-gray-100 py-20 planet">
         <div
           className="flex text-center justify-center items-center flex-col my-5"
           data-aos="fade-up"
@@ -134,7 +127,6 @@ export default function SectionThree() {
               />
             ))}
           </div>
-          <img className="flex-1" src={img} alt="" />
         </div>
       </div>
     </>

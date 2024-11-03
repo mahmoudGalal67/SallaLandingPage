@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function SectionTen() {
   return (
     <div className="md:px-[10%] px-[5%]">
-      <div className="bg-[#57578E] py-14  rounded-lg sm:flex md:flex-row sm:justify-between px-8">
+      <div className="bg-[#067DD3] py-14  rounded-lg sm:flex md:flex-row sm:justify-between px-8">
         <div className="flex flex-col  text-center">
           <div className="text-4xl font-bold text-[white]">
             {" "}
@@ -20,7 +20,7 @@ export default function SectionTen() {
           <Link to="/register">
             <button
               className="custom-button"
-              style={{ backgroundColor: "white", color: "#57578E" }}
+              style={{ backgroundColor: "white", color: "#067DD3" }}
             >
               أنشئ متجرك مجاناَ الان
             </button>

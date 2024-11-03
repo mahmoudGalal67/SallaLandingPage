@@ -24,12 +24,7 @@
 
 nav,
 body {
-  background: rgb(233, 245, 251);
-  background: radial-gradient(
-    circle,
-    rgba(233, 245, 251, 1) 85%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  color: #344d55;
 }
 
 .slick-dots li,
@@ -50,7 +45,7 @@ footer #wa-widget-send-button {
   border-radius: 25px;
   visibility: visible;
   transition: none !important;
-  background-color: #57578e;
+  background-color: #067dd3;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   right: 25px;
   cursor: pointer;
@@ -97,4 +92,18 @@ footer .wa-messenger-svg-whatsapp {
 .card-gradient-alt {
   background: linear-gradient(135deg, #f2711c 0%, #21ba45 100%);
   color: #fff;
+}
+
+.why-salla {
+  margin-top: -25px;
+  position: relative;
+  z-index: 10;
+}
+.why-salla .wrapper {
+  background-color: #def5fd;
+  border-radius: 45px;
+}
+.why-salla .item {
+  max-width: 250px;
+  gap: 15px;
 }
