@@ -5,6 +5,8 @@ import img4 from "../../assets/why4.svg";
 
 import hero from "../../../public/mainimg.png";
 import logo from "../../../public/Logo.webp";
+import sp1 from "../../../public/bgspecial.svg";
+import rec from "../../../public/rec.svg";
 
 import Button from "../../components/Button";
 import { useEffect } from "react";
@@ -54,8 +56,8 @@ export default function SectionOne() {
             style={{ position: "relative" }}
           >
             <img src={hero} alt="Hero image" />
-            <img className="sp-img" src="/public/bgspecial.svg" alt="" />
-            <img className="sp-img2" src="/public/rec.svg" alt="" />
+            <img className="sp-img" src={sp1} alt="" />
+            <img className="sp-img2" src={rec} alt="" />
           </div>
         </div>
         <div className="why-salla px-8" style={{ color: "#067DD3" }}>
