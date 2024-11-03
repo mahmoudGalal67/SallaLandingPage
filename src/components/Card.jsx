@@ -2,7 +2,10 @@ import { IoIosArrowDropleftCircle } from "react-icons/io";
 
 const Card = ({ imge, title, description, color }) => {
   return (
-    <div className="card mb-20 p-8 bg-white flex-1 max-w-[220px] md:max-w-[350px]  min-w-[280px] rounded-3xl pb-2">
+    <div
+      className="card mb-20 p-8 bg-white flex-1 max-w-[220px] md:max-w-[350px]  min-w-[280px] rounded-3xl pb-2"
+      style={{ minWidth: "320px" }}
+    >
       <div className="wrapper flex flex-col gap-2">
         <div
           className="icon"

@@ -3,6 +3,9 @@ import img2 from "../../assets/why2.svg";
 import img3 from "../../assets/why3.svg";
 import img4 from "../../assets/why4.svg";
 
+import hero from "../../../public/mainimg.png";
+import logo from "../../../public/Logo.webp";
+
 import Button from "../../components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -50,7 +53,7 @@ export default function SectionOne() {
             className="flex flex-1 justify-center pt-10"
             style={{ position: "relative" }}
           >
-            <img src="/public/mainimg.png" alt="Hero image" />
+            <img src={hero} alt="Hero image" />
             <img className="sp-img" src="/public/bgspecial.svg" alt="" />
             <img className="sp-img2" src="/public/rec.svg" alt="" />
           </div>
@@ -58,7 +61,7 @@ export default function SectionOne() {
         <div className="why-salla px-8" style={{ color: "#067DD3" }}>
           <div className="wrapper p-5 flex gap-4 flex-wrap justify-around items-center">
             <div className="item flex flex-col gap-2 items-start justify-center">
-              <img src="/public/Logo.webp" alt="" style={{ width: "120px" }} />
+              <img src={logo} alt="" style={{ width: "120px" }} />
               <h2 className="text-2xl" style={{ fontWeight: "700" }}>
                 لماذا سلة بلس هي اختيارك الأول
               </h2>
