@@ -3,7 +3,7 @@ import img2 from "../../assets/why2.svg";
 import img3 from "../../assets/why3.svg";
 import img4 from "../../assets/why4.svg";
 
-import hero from "../../../public/mainimg.png";
+import hero from "../../../public/Image.png";
 import logo from "../../../public/Logo.webp";
 import sp1 from "../../../public/bgspecial.svg";
 import rec from "../../../public/rec.svg";

@@ -114,7 +114,7 @@ const Footer = () => {
                         fill="#067DD3"
                       />
                     </svg>
-                    0543842272{" "}
+                    966125784411{" "}
                   </a>
                 </li>
                 <li className="mb-3">
@@ -544,7 +544,7 @@ const Footer = () => {
             <div className="flex items-center gap-5 justify-center flex-wrap md:mt-0 mt-5">
               <div className="flex gap-2 items-center  m">
                 <FiPhone className="text-sm text-gray-500 mt-1" />
-                <div className="text-sm text-gray-500">0543842272</div>
+                <div className="text-sm text-gray-500">966125784411</div>
               </div>
               <div className="flex gap-2 items-center">
                 <HiOutlineMail className="text-sm text-gray-500 mt-1" />
@@ -559,7 +559,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <a href="https://wa.me/+9660543842272" id="wa-widget-send-button">
+        <a href="https://wa.me/966125784411" id="wa-widget-send-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
