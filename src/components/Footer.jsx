@@ -99,7 +99,7 @@ const Footer = () => {
               <ul className="list-none">
                 <li className="mb-3">
                   <a
-                    href="#"
+                    href="tel:+966125784411"
                     className="text-[#08535f] flex justify-center lg:justify-start gap-3 hover:text-[#5a8c94]"
                   >
                     <svg
@@ -559,7 +559,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <a href="https://wa.me/966125784411" id="wa-widget-send-button">
+        <a href="https://wa.me/+9660543842272" id="wa-widget-send-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
