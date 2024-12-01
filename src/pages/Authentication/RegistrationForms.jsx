@@ -42,7 +42,7 @@ const LoginForm = () => {
                 });
                 localStorage.setItem("userToken", JSON.stringify(response));
 
-                window.location.href = `https://dashboard.sallaplus.com?name=${response.user.name}`;
+                window.location.href = `http://localhost:3000?name=${response.user.name}&token=${response.token}`;
               })
               .catch((error) => {
                 Swal.fire({

@@ -48,7 +48,9 @@
 
 .sp-img {
   position: absolute;
+  max-width: 120% !important;
   bottom: 0;
+  left: 0;
   z-index: -1;
 }
 .sp-img2 {
@@ -68,5 +70,12 @@
 @media (max-width: 800px) {
   .planet {
     background: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .sp-img2 {
+    right: -2%;
+    bottom: 150px;
   }
 }

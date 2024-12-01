@@ -104,7 +104,7 @@ const Footer = () => {
                   >
                     <svg
                       width="26"
-                      height="24"
+                      height="28"
                       viewBox="0 0 26 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ const Footer = () => {
                     className="text-[#08535f] flex gap-3 justify-center lg:justify-start hover:text-[#5a8c94]"
                   >
                     <svg
-                      width="24"
+                      width="28"
                       height="19"
                       viewBox="0 0 24 19"
                       fill="none"
@@ -147,7 +147,7 @@ const Footer = () => {
                   >
                     <svg
                       width="18"
-                      height="24"
+                      height="28"
                       viewBox="0 0 18 24"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -168,8 +168,7 @@ const Footer = () => {
                   <div className="icons flex items-center gap-4 justify-center">
                     <a href="https://www.facebook.com/people/SallaPlus/61557298537673/">
                       <svg
-                        width="25"
-                        height="25"
+                        style={{ width: "32px", height: "32px" }}
                         viewBox="0 0 25 25"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -189,12 +188,15 @@ const Footer = () => {
                       </svg>
                     </a>
                     <a href="https://www.tiktok.com/@sallaplus7">
-                      <FaTiktok color="#067DD3" />
+                      <FaTiktok
+                        style={{ width: "26px", height: "26px" }}
+                        color="#067DD3"
+                      />
                     </a>
                     <a href="https://www.instagram.com/sallaplus/">
                       <svg
-                        width="24"
-                        height="24"
+                        width="28"
+                        height="28"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
@@ -264,8 +266,8 @@ const Footer = () => {
                     </a>
                     <a href="https://wa.me/+9660543842272">
                       <svg
-                        width="24"
-                        height="24"
+                        width="28"
+                        height="28"
                         viewBox="0 0 24 24"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"

@@ -11,9 +11,12 @@ import rec from "../../../public/rec.svg";
 import Button from "../../components/Button";
 import { useEffect } from "react";
 import AOS from "aos";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 import "aos/dist/aos.css";
 export default function SectionOne() {
+  const user = JSON.parse(localStorage.getItem("userToken"));
+  console.log(user);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -37,7 +40,13 @@ export default function SectionOne() {
             </p>
             <div>
               <div className="flex items-center justify-center gap-5 ">
-                <Link to="https://dashboard.sallaplus.com/">
+                <Link
+                  to={
+                    user
+                      ? `http://localhost:3000?name=${user.user.name}&token=${user.token}`
+                      : "https://dashboard.sallaplus.com/"
+                  }
+                >
                   <button className="custom-button2 sm-btn text-main_color">
                     رحلة العميل
                   </button>

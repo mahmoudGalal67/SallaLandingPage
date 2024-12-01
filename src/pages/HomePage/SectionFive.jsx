@@ -39,7 +39,7 @@ export default function SectionFive() {
               />
             </div>
             <div data-aos="fade-up" data-aos-duration="2000">
-              <h1 className="text-3xl font-semibold text-main_color xl:text-3xl lg:text-3xl">
+              <h1 className="text-3xl font-semibold text-main_color xl:text-5xl lg:text-3xl">
                 {" "}
                 مدفوعات آمنة، لتجارة مستدامة، وثقة متينة!{" "}
               </h1>
