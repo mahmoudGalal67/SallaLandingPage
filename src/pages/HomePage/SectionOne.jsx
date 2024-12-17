@@ -6,7 +6,7 @@ import img4 from "../../assets/why4.svg";
 import hero from "../../../public/Image.png";
 import logo from "../../../public/Logo.webp";
 import sp1 from "../../../public/bgspecial.svg";
-import rec from "../../../public/rec.svg";
+import rec from "../../../public/rec.png";
 
 import Button from "../../components/Button";
 import { useEffect } from "react";

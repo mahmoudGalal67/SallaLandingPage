@@ -1,4 +1,4 @@
-import img from "../../assets/e421ef691533bc3c60900aa546960875.png";
+import img from "../../../public/Group 34.png";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
