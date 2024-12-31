@@ -7,6 +7,7 @@ import useAxios from "../../hoocks/useAxios";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import axios from "axios";
+import { useNavigate } from "react-router";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -18,7 +19,7 @@ const validationSchema = Yup.object({
     .required("البريد الإلكتروني مطلوب")
     .min(5, "البريد الإلكتروني يجب أن يكون بين 5 و 100 حرف")
     .max(100, "البريد الإلكتروني يجب أن يكون بين 5 و 100 حرف"),
-  phone: Yup.string()
+  mobile: Yup.string()
     .required("رقم الجوال مطلوب")
     .min(9, "رقم الجوال يجب أن يكون بين 9 و 13 حرف")
     .max(13, "رقم الجوال يجب أن يكون بين 9 و 13 حرف"),
@@ -26,32 +27,45 @@ const validationSchema = Yup.object({
     .required("كلمة المرور مطلوبة")
     .min(8, "كلمة المرور يجب أن تكون بين 8 و 16 حرف")
     .max(16, "كلمة المرور يجب أن تكون بين 8 و 16 حرف"),
-  password_confirmation: Yup.string()
-    .required(" تاكيد كلمة المرور مطلوبة ")
-    .oneOf([Yup.ref("password"), null], "كلمة المرور يجب أن تكون متطابقة"),
+  // password_confirmation: Yup.string()
+  //   .required(" تاكيد كلمة المرور مطلوبة ")
+  //   .oneOf([Yup.ref("password"), null], "كلمة المرور يجب أن تكون متطابقة"),
 });
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const axiosInstance = useAxios();
+
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
-      phone: "",
+      mobile: "",
       password: "",
-      password_confirmation: "",
+
+      // password_confirmation: "",
     },
     validationSchema: validationSchema,
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
-        const response = await axios.post(
-          "https://sallaplusbacknew.sallaplus.com/public/api/website/user/register",
-          values
+        const data = await axios.post(
+          "http://salla1-001-site1.anytempurl.com/api/UsersController/register",
+          {
+            ...values,
+            otp: "string",
+            userPhoto: "string",
+            role: "string",
+            active: true,
+          }
         );
-        Swal.fire("تم التسجيل بنجاح", response.message, "success");
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "register successful",
+        });
         resetForm();
+        navigate("/login");
       } catch (error) {
         const message = error.response?.data?.message || "حدث خطأ ما";
         const errors = error.response?.data?.errors || {};
@@ -107,21 +121,21 @@ const LoginForm = () => {
               رقم الجوال
             </label>
             <PhoneInput
-              name="phone"
+              name="mobile"
               placeholder="ادخل رقم الجوال"
               defaultCountry="sa"
-              onChange={(value) => formik.setFieldValue("phone", value)}
+              onChange={(value) => formik.setFieldValue("mobile", value)}
               onBlur={formik.handleBlur}
-              value={formik.values.phone}
+              value={formik.values.mobile}
               inputProps={{
                 style: {
                   direction: "ltr",
                 },
               }}
             />
-            {formik.touched.phone && formik.errors.phone ? (
+            {formik.touched.mobile && formik.errors.mobile ? (
               <div className="text-red-500 text-sm text-right">
-                {formik.errors.phone}
+                {formik.errors.mobile}
               </div>
             ) : null}
           </div>
@@ -150,7 +164,7 @@ const LoginForm = () => {
               </div>
             ) : null}
           </div>
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <label className="block text-gray-700 my-3">
               تأكيد كلمة المرور
             </label>
@@ -177,7 +191,7 @@ const LoginForm = () => {
                 {formik.errors.password_confirmation}
               </div>
             ) : null}
-          </div>
+          </div> */}
           <button
             type="submit"
             className="w-full bg-[#d4f2fc] text-main_color p-2 rounded mt-5 my-1"

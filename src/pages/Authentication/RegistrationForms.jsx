@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import useAxios from "../../hoocks/useAxios";
 import { Link } from "react-router-dom";
 
+import Cookies from "js-cookie";
+
 // Validation
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email address").required("Required"),
@@ -27,22 +29,27 @@ const LoginForm = () => {
           validationSchema={validationSchema}
           onSubmit={(values, { setSubmitting }) => {
             axiosInstance
-              .post(
-                "https://sallaplusbacknew.sallaplus.com/public/api/website/user/login",
-                values
+              .get(
+                `http://salla1-001-site1.anytempurl.com/api/UsersController/login?Email=${values.email}&password=${values.password}`
+                // values
               )
 
               .then((response) => {
-                console.log("Login response:", response);
-                localStorage.setItem("token", response.token);
+                localStorage.setItem("token", response[0]);
+                Cookies.set("auth_token", response[0].token, {
+                  domain: ".sallaplus.com", // Shared domain
+                  path: "/", // Available across all routes
+                  secure: true, // Only accessible over HTTPS
+                  sameSite: "None", // Required for cross-origin requests
+                });
+
                 Swal.fire({
                   icon: "success",
                   title: "Success",
                   text: "Login successful",
                 });
-                localStorage.setItem("userToken", JSON.stringify(response));
 
-                window.location.href = `http://localhost:3000?name=${response.user.name}&token=${response.token}`;
+                // window.location.href = `http://localhost:3000?name=${response.user.name}&token=${response.token}`;
               })
               .catch((error) => {
                 Swal.fire({
