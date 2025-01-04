@@ -35,8 +35,8 @@ const LoginForm = () => {
               )
 
               .then((response) => {
-                localStorage.setItem("token", response[0]);
-                Cookies.set("auth_token", response[0].token, {
+                localStorage.setItem("userInfo", JSON.stringify(response[0]));
+                Cookies.set("usertoken", response[0].token, {
                   domain: ".sallaplus.com", // Shared domain
                   path: "/", // Available across all routes
                   secure: true, // Only accessible over HTTPS
@@ -48,8 +48,10 @@ const LoginForm = () => {
                   title: "Success",
                   text: "Login successful",
                 });
-
-                // window.location.href = `http://localhost:3000?name=${response.user.name}&token=${response.token}`;
+                return response[0];
+              })
+              .then((response) => {
+                window.location.href = `https://dashboard.sallaplus.com?name=${response.name}&email=${response.email}&mobile=${response.mobile}&userId=${response.userId}&userPhoto=${response.userPhoto}`;
               })
               .catch((error) => {
                 Swal.fire({
