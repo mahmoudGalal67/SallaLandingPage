@@ -40,13 +40,7 @@ export default function SectionOne() {
             </p>
             <div>
               <div className="flex items-center justify-center gap-5 ">
-                <Link
-                  to={
-                    user
-                      ? `http://localhost:3000?name=${user.user.name}&token=${user.token}`
-                      : "https://dashboard.sallaplus.com/"
-                  }
-                >
+                <Link to="https://dashboard.sallaplus.com/">
                   <button className="custom-button2 sm-btn text-main_color">
                     رحلة العميل
                   </button>
