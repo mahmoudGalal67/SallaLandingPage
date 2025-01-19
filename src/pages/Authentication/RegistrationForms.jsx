@@ -30,7 +30,7 @@ const LoginForm = () => {
           onSubmit={(values, { setSubmitting }) => {
             axiosInstance
               .get(
-                `http://salla1-001-site1.anytempurl.com/api/UsersController/login?Email=${values.email}&password=${values.password}`
+                `https://salla111-001-site1.ptempurl.com/api/UsersController/login?Email=${values.email}&password=${values.password}`
                 // values
               )
 

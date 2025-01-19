@@ -50,7 +50,7 @@ const LoginForm = () => {
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
         const data = await axios.post(
-          "http://salla1-001-site1.anytempurl.com/api/UsersController/register",
+          "https://salla111-001-site1.ptempurl.com/api/UsersController/register",
           {
             ...values,
             otp: "string",
