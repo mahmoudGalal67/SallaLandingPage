@@ -14,18 +14,18 @@ export default function WebsiteRoutes() {
         path="/"
         element={
           <WebsiteLayout>
-            <HomePage />
+            <NavigationComponent />
           </WebsiteLayout>
         }
       />
-      <Route
+      {/* <Route
         path="/our-services"
         element={
           <WebsiteLayout>
             <Services />
           </WebsiteLayout>
         }
-      />
+      /> */}
 
       <Route
         path="/register"
@@ -60,14 +60,14 @@ export default function WebsiteRoutes() {
         }
       />
 
-      <Route
+      {/* <Route
         path="*"
         element={
           <WebsiteLayout>
             <HomePage />
           </WebsiteLayout>
         }
-      />
+      /> */}
     </Routes>
   );
 }

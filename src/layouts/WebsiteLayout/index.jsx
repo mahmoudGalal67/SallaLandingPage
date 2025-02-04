@@ -4,7 +4,12 @@ import Footer from "../../components/Footer";
 
 export default function WebsiteLayout({ children }) {
   const location = useLocation();
-  const hideNavbarFooter = ["/register", "/login","/password/reset"].includes(location.pathname);
+  const hideNavbarFooter = [
+    "/",
+    "/register",
+    "/login",
+    "/password/reset",
+  ].includes(location.pathname);
 
   return (
     <>

@@ -7,8 +7,7 @@ import Logo from "../../../public/Logo.webp";
 
 const AppContent = () => {
   const location = useLocation();
-  console.log("location", location);
-
+  console.log(location.pathname);
   const getImageSrc = () => {
     if (location.pathname === "/register") {
       return <Registrationstyle />;
@@ -49,6 +48,7 @@ const AppContent = () => {
           </div>
 
           {location.pathname == "/login" && <RegistrationForm />}
+          {location.pathname == "/" && <RegistrationForm />}
           {location.pathname == "/register" && <LoginForm />}
         </div>
       </div>
